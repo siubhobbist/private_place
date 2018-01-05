@@ -5,14 +5,12 @@
 	<div>
 		<h1><a href=""> Private Place </a> </h1>
 	</div>
-	
-	<div>
-		<em> Napis </em>
-	</div>
-
-	<div>
-		<p> Drugi </p>
-		<ul><li>lista1</li><li>lista2</li>
-	</ul>
-	</div>
+	{% for post in posts %}
+		<div>
+			<p>published : {{post.published_date}}</p>
+			<p>Kuba</p>
+			<h1><a href="/">{{post.title}}</a></h1>
+			<p>{{post.text | linebreaksbr}}</p>
+		</div>
+	{% endfor %}
 </html>
